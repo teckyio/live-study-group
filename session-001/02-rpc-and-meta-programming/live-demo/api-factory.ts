@@ -8,15 +8,15 @@ let code = `
 let api_origin = 'http://localhost:8100'
 
 async function callRPC(name: string, input: object){
-	let res = await fetch(api_origin + '/rpc/' + name, {
-		method: 'POST',
-		headers: {
-			'Content-Type': 'application/json',
-		},
-		body: JSON.stringify(input)
-	})
-	let json = await res.json()
-	return json
+  let res = await fetch(api_origin + '/rpc/' + name, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(input)
+  })
+  let json = await res.json()
+  return json
 }
 `
 
