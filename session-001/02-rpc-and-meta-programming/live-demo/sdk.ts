@@ -10,6 +10,9 @@ async function callRPC(name: string, input: object){
     body: JSON.stringify(input)
   })
   let json = await res.json()
+  if (json.error) {
+    throw new Error(json.error)
+  }
   return json
 }
 
