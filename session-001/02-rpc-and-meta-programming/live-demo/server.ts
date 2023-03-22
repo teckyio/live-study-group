@@ -30,12 +30,20 @@ defAPI({
 
 defAPI({
   name: 'getMemoList',
-  sampleInput: {},
+  sampleInput: {
+    page: 1,
+    count: 5,
+  },
   sampleOutput: {
     memos: [{ id: 1, title: 'sample title', content: 'sample content' }],
   },
   fn: input => {
-    return { memos: Array.from(memos.values()) }
+    let count = Math.min(input.count, 20)
+    let start = (input.page - 1) * count
+    let end = start + count
+    return {
+      memos: Array.from(memos.values()).slice(start, end),
+    }
   },
 })
 

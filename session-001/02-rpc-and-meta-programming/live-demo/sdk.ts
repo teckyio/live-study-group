@@ -13,10 +13,24 @@ async function callRPC(name: string, input: object){
 	return json
 }
 
-export async function createMemo(input: { title: string; content: string }): Promise<{ id: number }> {
+export async function createMemo(input: {
+  title: string;
+  content: string;
+}): Promise<{
+  id: number;
+}> {
 	return callRPC('createMemo', input)
 }
 
-export async function getMemoList(input: {  }): Promise<{ memos: Array<{ id: number; title: string; content: string }> }> {
+export async function getMemoList(input: {
+  page: number;
+  count: number;
+}): Promise<{
+  memos: Array<{
+    id: number;
+    title: string;
+    content: string;
+  }>;
+}> {
 	return callRPC('getMemoList', input)
 }

@@ -26,8 +26,8 @@ export function defAPI<Input, Output>(input: {
   sampleOutput: Output
   fn: (input: Input) => Output | Promise<Output>
 }) {
-  let inputType = genTsType(input.sampleInput)
-  let outputType = genTsType(input.sampleOutput)
+  let inputType = genTsType(input.sampleInput, { format: true })
+  let outputType = genTsType(input.sampleOutput, { format: true })
 
   code += `
 export async function ${input.name}(input: ${inputType}): Promise<${outputType}> {
