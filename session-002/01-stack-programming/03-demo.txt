@@ -1,0 +1,10 @@
+math: 5+4+5?
+
+joy: 5 4 5 + + .
+             ^
+
+stack: 5
+stack: 5 4
+stack: 5 4 5
+stack: 5 9
+stack: 14

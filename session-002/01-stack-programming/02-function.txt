@@ -1,0 +1,12 @@
+DEFINE square == dup * .
+
+joy: 3 square
+
+joy: 3 dup * .
+             ^
+
+stack: 3
+stack: 3 3
+stack: 9
+stack: 
+(print 9)

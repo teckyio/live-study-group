@@ -1,0 +1,5 @@
+# check over 18-years old (inclusive)
+
+regex: 1[8|9]|[2-9][\d]
+
+js: if(age>=18)

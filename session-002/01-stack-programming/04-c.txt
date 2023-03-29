@@ -1,0 +1,42 @@
+# C
+
+01 int add3(int a, int b, int c) {
+02   int acc = 0;
+03   acc += a;
+04   acc += b;
+05   acc += c;
+06   return acc
+07 }
+08 
+09 
+10 int main() {
+11   int result = add3(4,5,6);
+12   print(result);
+13   return 0;
+14 }
+
+# Assembly
+
+01 LIT 4;
+02 LIT 5;
+03 LIT 6;
+04 GOTO 09;
+05 POP -> result;
+06 LOAD <- result;
+07 PRINT;
+08 HALT
+09 ACC = 0;
+10 R1 <- POP;
+11 ACC = ACC + R1
+12 R1 <- POP;
+13 ACC = ACC + R1
+14 R1 <- POP;
+15 ACC = ACC + R1
+16 PUSH ACC
+17 GOTO 05
+
+pc: 07
+stack: 15
+ACC: 15
+R1: 4
+result: 15

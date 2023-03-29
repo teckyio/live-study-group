@@ -1,0 +1,27 @@
+math: 2 + 3
+
+js: console.log(2+3)
+
+joy: 2 3 + .
+         ^
+
+stack: 2
+stack: 2 3
+stack: 5
+stack:
+(print 5)
+
+math: (2 + 3) x (4 + 5)
+
+js: console.log( (2+3) * (4+5) )
+
+joy: 2 3 + 4 5 + * .
+                 ^
+stack: 2
+stack: 2 3
+stack: 5 4
+stack: 5 4 5
+stack: 5 9
+stack: 45
+stack:
+(print 45)
